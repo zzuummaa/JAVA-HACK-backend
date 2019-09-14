@@ -16,8 +16,11 @@ import java.util.stream.StreamSupport;
 @RequestMapping("/investments")
 public class InvestController {
 
-    @Autowired
-    private BuisnessDescriptionRepository buisnessDescriptionRepository;
+    private final BuisnessDescriptionRepository buisnessDescriptionRepository;
+
+    public InvestController(BuisnessDescriptionRepository buisnessDescriptionRepository) {
+        this.buisnessDescriptionRepository = buisnessDescriptionRepository;
+    }
 
     @GetMapping("/businesses")
     public ResponseEntity<?> example(@RequestParam(required = false) String category) {
@@ -43,7 +46,7 @@ public class InvestController {
 
     @PostMapping("businesses")
     public ResponseEntity<?> add(@RequestBody BuisnessDescription buisnessDescription) {
-        buisnessDescriptionRepository.save(new BuisnessDescriptionDB(buisnessDescription));
-        return new ResponseEntity<>(buisnessDescription, HttpStatus.OK);
+        BuisnessDescriptionDB bd = buisnessDescriptionRepository.save(new BuisnessDescriptionDB(buisnessDescription));
+        return new ResponseEntity<>(new BuisnessDescription(bd), HttpStatus.OK);
     }
 }

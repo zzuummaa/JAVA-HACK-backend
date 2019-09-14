@@ -28,7 +28,7 @@ public class BuisnessDescriptionDB {
     public BuisnessDescriptionDB(BuisnessDescription bd) {
         name = bd.getName();
         category = bd.getCategory();
-        iconURL = getIconURL();
+        iconURL = bd.getIconURL();
 
         if (bd.getProfit() == null ||
             bd.getRevenue() == null ||

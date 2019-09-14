@@ -1,7 +1,9 @@
 package app.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -10,6 +12,8 @@ import java.util.ArrayList;
 @Table(name="information")
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BuisnessInformationDB {
     @Id
     @GeneratedValue
