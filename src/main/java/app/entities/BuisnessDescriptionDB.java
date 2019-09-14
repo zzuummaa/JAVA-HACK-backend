@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 
@@ -21,6 +22,7 @@ public class BuisnessDescriptionDB {
     private String name;
     private String category;
     private String iconURL;
+    @Column(length = 2048)
     private String descriptionText;
 
     @OneToOne(cascade = CascadeType.ALL)
