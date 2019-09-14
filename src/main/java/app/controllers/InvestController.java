@@ -23,7 +23,7 @@ public class InvestController {
     }
 
     @GetMapping("/businesses")
-    public ResponseEntity<?> example(@RequestParam(required = false) String category) {
+    public ResponseEntity<?> get(@RequestParam(required = false) String category) {
         if (category == null) {
             List<BuisnessDescription> bd = StreamSupport.stream(
                     buisnessDescriptionRepository.findAll().spliterator(), false)
@@ -32,7 +32,7 @@ public class InvestController {
             return new ResponseEntity<>(bd, HttpStatus.OK);
         } else {
             try {
-                Category.valueOf(category);
+                Category.valueOfIgnoreCase(category);
             } catch (Exception e) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
