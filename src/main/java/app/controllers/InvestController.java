@@ -20,12 +20,16 @@ public class InvestController {
     private BuisnessDescriptionRepository buisnessDescriptionRepository;
 
     @GetMapping("/businesses")
-    public ResponseEntity<?> example(@RequestParam String category) {
+    public ResponseEntity<?> example(@RequestParam(required = false) String category) {
         BuisnessDescription buisnessDescription;
         if (category == null) {
             return new ResponseEntity<>(buisnessDescriptionRepository.findAll(), HttpStatus.OK);
         } else {
-
+            try {
+                Category.valueOf(category);
+            } catch (Exception e) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
             buisnessDescriptionRepository.getByCategory(category);
             return new ResponseEntity<>(buisnessDescriptionRepository.getByCategory(category), HttpStatus.OK);
         }
