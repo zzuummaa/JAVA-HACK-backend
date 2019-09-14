@@ -1,6 +1,6 @@
 package app.repository;
 
-import app.models.BuisnessInformationDB;
+import app.entities.BuisnessInformationDB;
 import org.springframework.data.repository.CrudRepository;
 
 

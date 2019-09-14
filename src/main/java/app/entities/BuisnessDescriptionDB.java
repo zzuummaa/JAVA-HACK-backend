@@ -1,5 +1,6 @@
-package app.models;
+package app.entities;
 
+import app.models.BuisnessDescription;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +21,7 @@ public class BuisnessDescriptionDB {
     private String name;
     private String category;
     private String iconURL;
+    private String description;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "description_id", referencedColumnName = "id")
@@ -29,6 +31,7 @@ public class BuisnessDescriptionDB {
         name = bd.getName();
         category = bd.getCategory();
         iconURL = bd.getIconURL();
+        description = bd.getDescription();
 
         if (bd.getProfit() == null ||
             bd.getRevenue() == null ||

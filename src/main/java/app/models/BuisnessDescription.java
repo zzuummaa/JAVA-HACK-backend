@@ -1,5 +1,7 @@
 package app.models;
 
+import app.entities.BuisnessDescriptionDB;
+import app.entities.BuisnessInformationDB;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +16,7 @@ public class BuisnessDescription {
     private String name;
     private String category;
     private String iconURL;
+    private String description;
 
     private Graphic profit;
     private Graphic revenue;
@@ -26,6 +29,7 @@ public class BuisnessDescription {
         name = bd.getName();
         category = bd.getCategory();
         iconURL = bd.getIconURL();
+        description = bd.getDescription();
 
         BuisnessInformationDB bi = bd.getBuisnessInformation();
         if (bi == null) return;

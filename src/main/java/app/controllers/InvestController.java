@@ -2,7 +2,7 @@ package app.controllers;
 
 import app.Category;
 import app.models.BuisnessDescription;
-import app.models.BuisnessDescriptionDB;
+import app.entities.BuisnessDescriptionDB;
 import app.repository.BuisnessDescriptionRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +28,6 @@ public class InvestController {
             List<BuisnessDescription> bd = StreamSupport.stream(
                     buisnessDescriptionRepository.findAll().spliterator(), false)
                     .map(BuisnessDescription::new).collect(Collectors.toList());
-
             return new ResponseEntity<>(bd, HttpStatus.OK);
         } else {
             try {
@@ -39,7 +38,6 @@ public class InvestController {
             List<BuisnessDescription> bd = StreamSupport.stream(
                     buisnessDescriptionRepository.getByCategory(category).spliterator(), false)
                     .map(BuisnessDescription::new).collect(Collectors.toList());
-
             return new ResponseEntity<>(bd, HttpStatus.OK);
         }
     }
