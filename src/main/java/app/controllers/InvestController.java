@@ -49,4 +49,10 @@ public class InvestController {
         BuisnessDescriptionDB bd = buisnessDescriptionRepository.save(new BuisnessDescriptionDB(buisnessDescription));
         return new ResponseEntity<>(new BuisnessDescription(bd), HttpStatus.OK);
     }
+
+    @DeleteMapping("businesses")
+    public ResponseEntity<?> removeAll() {
+        buisnessDescriptionRepository.deleteAll();
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
