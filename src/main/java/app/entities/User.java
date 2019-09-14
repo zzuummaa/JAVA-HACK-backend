@@ -1,5 +1,5 @@
 /*
-package entities;
+package app.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
