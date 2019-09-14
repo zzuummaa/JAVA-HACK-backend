@@ -31,6 +31,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("The Khan Academy is a non-profit educational organization that provides free video tutorials and interactive exercises. The Academy's declared mission is “changing education for the better by providing a free world-class education to anyone anywhere")
                 .build();
         ResponseEntity<String> response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -44,6 +45,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("edX is a massive open online course (MOOC) provider. It hosts online university-level courses in a wide range of disciplines to a worldwide student body, including some courses at no charge. It also conducts research into learning based on how people use its platform")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -57,6 +59,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("Intel Corp. engages in the design, manufacture, and sale of computer products and technologies. It delivers computer, networking, data storage and communications platforms.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -70,6 +73,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("Microsoft is a leading global vendor of computer software; hardware for computer, mobile and gaming systems; and cloud services. Microsoft's corporate headquarters is located in Redmond, Wash., and it has offices in more than 60 countries.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -83,6 +87,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("The Walt Disney Co. is a diversified international family entertainment and media enterprise. It operates through the following segments: Media Networks, Parks & Resorts, Studio Entertainment and Consumer Products & Interactive Media.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -96,6 +101,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("Bauman Moscow State Technical University (BMSTU) is the leading Russian university, that has throughout more than 175 years of its history brought to life outstanding scientists and researchers, who were pioneers in World rocketry, aviation and heavy industry. BMSTU is featured in a number of QS rankings.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -109,6 +115,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("Infomax Solutions is an IT solution and service provider for small businesses in San Diego area. We manage your IT so that you can focus on your core business.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -122,6 +129,11 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("3Dexter is an Education company bringing Experiential " +
+                        "Learning- in schools and colleges using 3D Printing- and other futuristic" +
+                        " technologies- . We envision 3D Technology to be at the core of innovation." +
+                        " The motive is to enable the students to imagine, dream and turn them into" +
+                        " reality")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
 
@@ -134,6 +146,10 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
+                .descriptionText("Opensignal is an independent mobile analytics company specialising in quantifying " +
+                        "mobile network experience. The company uses real-world mobile network data of users across" +
+                        " the world to power its mobile analytics product suite as well as to produce mobile network" +
+                        " analyses on over 88 countries across the world.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);

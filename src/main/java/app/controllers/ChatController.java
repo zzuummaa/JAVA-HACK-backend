@@ -26,7 +26,7 @@ public class ChatController {
         return new ResponseEntity<>(messages, HttpStatus.OK);
     }
 
-    @PostMapping("/save")
+    @PostMapping("/sent")
     public ResponseEntity<HttpStatus> save(@RequestBody Message message) {
         MessageDB messageDb = new MessageDB(message);
         return new ResponseEntity<>(HttpStatus.OK);

@@ -16,7 +16,7 @@ public class BuisnessDescription {
     private String name;
     private String category;
     private String iconURL;
-    private String description;
+    private String descriptionText;
 
     private Graphic profit;
     private Graphic revenue;
@@ -29,7 +29,7 @@ public class BuisnessDescription {
         name = bd.getName();
         category = bd.getCategory();
         iconURL = bd.getIconURL();
-        description = bd.getDescription();
+        descriptionText = bd.getDescriptionText();
 
         BuisnessInformationDB bi = bd.getBuisnessInformation();
         if (bi == null) return;

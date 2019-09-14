@@ -21,17 +21,17 @@ public class BuisnessDescriptionDB {
     private String name;
     private String category;
     private String iconURL;
-    private String description;
+    private String descriptionText;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "description_id", referencedColumnName = "id")
+    @JoinColumn(name = "information_id", referencedColumnName = "id")
     private BuisnessInformationDB buisnessInformation;
 
     public BuisnessDescriptionDB(BuisnessDescription bd) {
         name = bd.getName();
         category = bd.getCategory();
         iconURL = bd.getIconURL();
-        description = bd.getDescription();
+        descriptionText = bd.getDescriptionText();
 
         if (bd.getProfit() == null ||
             bd.getRevenue() == null ||
