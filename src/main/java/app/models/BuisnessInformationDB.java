@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class BuisnessInformationDB {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     ArrayList<Double> profitX;
     ArrayList<Double> profitY;
     ArrayList<Double> revenueX; //выручка

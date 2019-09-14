@@ -5,13 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Graphic {
-    private List<Double> x;
-    private List<Double> y;
+    private ArrayList<Double> x;
+    private ArrayList<Double> y;
 }

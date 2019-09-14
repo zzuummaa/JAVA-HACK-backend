@@ -1,6 +1,7 @@
 package app.controllers;
 
 import app.models.BuisnessDescription;
+import app.models.BuisnessDescriptionDB;
 import app.repository.BuisnessDescriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,12 +43,7 @@ public class InvestController {
 
     @PostMapping("businesses")
     public ResponseEntity<?> add(@RequestBody BuisnessDescription buisnessDescription) {
-//        buisnessDescription = BuisnessDescription.builder()
-//                .name("Miscrosoft")
-//                .category("IT")
-//                .iconURL("http://zzuummaa.sytes.net:8070/fileserver/investment/microsoft.png")
-//                .build();
-//        buisnessDescriptionRepository.save(buisnessDescription);
-        return new ResponseEntity<BuisnessDescription>(buisnessDescription, HttpStatus.OK);
+        buisnessDescriptionRepository.save(new BuisnessDescriptionDB(buisnessDescription));
+        return new ResponseEntity<>(buisnessDescription, HttpStatus.OK);
     }
 }
