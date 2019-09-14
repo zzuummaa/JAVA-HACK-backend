@@ -1,4 +1,4 @@
-package app.controllers;
+package app;
 
 public enum Category {
     IT("IT"),
