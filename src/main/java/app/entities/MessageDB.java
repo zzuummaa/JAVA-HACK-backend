@@ -1,8 +1,7 @@
 package app.entities;
 
 import app.models.Message;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,8 +11,10 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Builder
 @Table(name="messages")
 @NoArgsConstructor
+@AllArgsConstructor
 public class MessageDB {
     @Id
     @GeneratedValue
@@ -25,7 +26,7 @@ public class MessageDB {
     public MessageDB(Message message) {
         this.id = message.getId();
         this.body = message.getBody();
-        this.date = message.getDate();
+        this.date = LocalDateTime.now();
         this.isBot = message.isBot();
     }
 }
