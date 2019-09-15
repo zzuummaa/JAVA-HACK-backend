@@ -68,7 +68,7 @@ public class TextSimilarityCalculator {
         double[][] similarityMat = new double[words.length][keyWords.length];
         for (int i = 0; i < words.length; i++) {
             for (int j = 0; j < keyWords.length; j++) {
-                similarityMat[i][j] = compareWords(words[i], keyWords[j]);
+                similarityMat[i][j] = compareWords(words[i].toLowerCase(), keyWords[j].toLowerCase());
             }
         }
 

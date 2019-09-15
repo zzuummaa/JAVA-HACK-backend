@@ -46,7 +46,7 @@ public class ChatController {
 
     @PostMapping
     public ResponseEntity<HttpStatus> save(@RequestBody Message message) {
-        final String question = message.getBody();
+        String question = message.getBody();
         if (question == null) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         if (queueSize.getAndIncrement() < queueCapacity) {
             executor.submit(() -> {
@@ -67,7 +67,7 @@ public class ChatController {
                         answerStr = "ref://" + bd.get(answerId).getId();
                     }
                     MessageDB messageDB = MessageDB.builder()
-                            .date(LocalDateTime.now())
+                            .date(LocalDateTime.now().plusSeconds(1))
                             .isBot(true)
                             .body(answerStr)
                             .build();
