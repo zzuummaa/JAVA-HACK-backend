@@ -14,11 +14,11 @@ import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/investments")
-public class InvestController {
+public class BuisnessController {
 
     private final BuisnessDescriptionRepository buisnessDescriptionRepository;
 
-    public InvestController(BuisnessDescriptionRepository buisnessDescriptionRepository) {
+    public BuisnessController(BuisnessDescriptionRepository buisnessDescriptionRepository) {
         this.buisnessDescriptionRepository = buisnessDescriptionRepository;
     }
 

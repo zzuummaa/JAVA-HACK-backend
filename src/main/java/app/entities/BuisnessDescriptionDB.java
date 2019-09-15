@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="description")
@@ -28,6 +29,9 @@ public class BuisnessDescriptionDB {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "information_id", referencedColumnName = "id")
     private BuisnessInformationDB buisnessInformation;
+
+    @OneToMany(mappedBy = "buisnessDescriptionDB", cascade = CascadeType.ALL)
+    private Set<PaymentDB> paymentDB;
 
     public BuisnessDescriptionDB(BuisnessDescription bd) {
         name = bd.getName();
