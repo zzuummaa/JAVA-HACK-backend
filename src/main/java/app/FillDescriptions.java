@@ -31,7 +31,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("The Khan Academy is a non-profit educational organization that provides free video tutorials and interactive exercises. The Academy's declared mission is “changing education for the better by providing a free world-class education to anyone anywhere")
+                .descriptionText("Khan Academy, она же Академия Хана, названа по имени своего основателя — Салмана Хана. В 2006 году он создал этот ресурс в качестве хобби: рисовал формулы, решал примеры и записывал процесс на видео, сопровождая достаточно неформальными комментариями свои действия. Первоначально сайт был рассчитан только на учеников с минимальными знаниями по техническим предметам, но сейчас там есть и более сложные лекции. Эта платформа идеально подойдет тем, кто привык двигаться в своем темпе и только начинает свой путь в мире онлайн-образования. Все уроки на сайте, конечно, бесплатны.")
                 .build();
         ResponseEntity<String> response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -45,7 +45,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("edX is a massive open online course (MOOC) provider. It hosts online university-level courses in a wide range of disciplines to a worldwide student body, including some courses at no charge. It also conducts research into learning based on how people use its platform")
+                .descriptionText("Целью проекта EDX является создание для дистанционного образования открытой и свободной платформы для бесплатного обучения всех желающих. Данный проект содержит онлайн курсы, содержание которых соответствует самому высокому университетскому уровню и рассчитан на международную аудиторию.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -59,7 +59,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("Intel Corp. engages in the design, manufacture, and sale of computer products and technologies. It delivers computer, networking, data storage and communications platforms.")
+                .descriptionText("Компания Intel является сегодня крупнейшим производителем полупроводников в мире. Она изменила наш мир не меньше, чем это сделали Apple и Microsoft в свое время (а если говорить точнее, то они ничего бы не сделали без Intel). Ведь Intel изобрела микропроцессор – сердце современных компьютеров. В начале XXI века процессоры Intel были установлены более чем на 80% компьютеров по всему миру. Сегодня Intel выпускает достаточно широкий спектр продукции, который не заканчивается на одних лишь процессорах. Так, компания производит материнские платы, флэш память, концентраторы и маршрутизаторы, концептуальные ноутбуки и многое другое.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -73,7 +73,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("Microsoft is a leading global vendor of computer software; hardware for computer, mobile and gaming systems; and cloud services. Microsoft's corporate headquarters is located in Redmond, Wash., and it has offices in more than 60 countries.")
+                .descriptionText("Microsoft (Nasdaq “MSFT” @microsoft) обеспечивает условия для цифровой трансформации в эпоху «интеллектуального облака» и «интеллектуальных технологий». Миссия компании – дать возможность каждому человеку и организации на планете достичь большего.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -87,7 +87,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("The Walt Disney Co. is a diversified international family entertainment and media enterprise. It operates through the following segments: Media Networks, Parks & Resorts, Studio Entertainment and Consumer Products & Interactive Media.")
+                .descriptionText("Сегодня Walt Disney Company – это компания-конгломерат, которая занимается не только съемкой и продюссированием мультфильмов и семейных кинофильмов. В активе Уолт Диснея находится большой список сфер из индустрии развлечений")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -101,7 +101,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("Bauman Moscow State Technical University (BMSTU) is the leading Russian university, that has throughout more than 175 years of its history brought to life outstanding scientists and researchers, who were pioneers in World rocketry, aviation and heavy industry. BMSTU is featured in a number of QS rankings.")
+                .descriptionText("Ведущий технический вуз России, которому удается оказываться в первой пятерке, как специализированных, так и общих рейтингов университетов. В «Бауманку» проще поступить, чем ее закончить. Неофициальная статистика свидетельствует, что доучиться до победного конца не удается более четверти студентов - требования к качеству знаний в вузе крайне высоки. Студенты университета привлекаются к реальной исследовательской работе, многие из них выбирают «научно-исследовательское будущее» и продолжают обучение в аспирантуре. Пограммисты из Бауманки известны во всем мире и востребованы не только в России, но и за рубежом.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
@@ -115,7 +115,7 @@ public class FillDescriptions {
                 .debts(graphic)
                 .assets(graphic)
                 .capital(graphic)
-                .descriptionText("Infomax Solutions is an IT solution and service provider for small businesses in San Diego area. We manage your IT so that you can focus on your core business.")
+                .descriptionText("ООО «Инфомаксимум» образована в 2008 году. Основная деятельность — разработка высокопроизводительных сетевых систем. На данный момент выиграно более 11 федеральных и региональных научных грантов. Сотрудники компании не раз становились призерами всероссийских математических олимпиад. ООО «Инфомаксимум» является разработчиком и владельцем системы учета рабочего времени CrocoTime.")
                 .build();
         response = restTemplate.postForEntity(fooResourceUrl, bd, String.class);
         System.out.println(response);
